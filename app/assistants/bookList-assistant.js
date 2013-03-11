@@ -7,6 +7,23 @@ function BookListAssistant() {
 
 BookListAssistant.prototype.setup = function() {
 	/* this function is for setup tasks that have to happen when the scene is first created */
+	this.controller.setupWidget("bookList",
+	    this.listAttr = {
+	       itemTemplate: "bookList/itemTemplate",
+	       swipeToDelete: false,
+	       renderLimit: 40,
+	       reorderable: false
+	    },
+	    this.listModel = {
+	       listTitle: "book list",
+	       items: [
+	          {"title": "test1", "text": "12345671234567sdfghsdfg"},
+                  {"title": "test2", "text": "123456789234567dfghjfgd"},
+
+                  {"title": "test2", "text": "123456789234567dfghjfgd"},
+
+                  {"title": "test2", "text": "123456789234567dfghjfgd"}],
+            });
 		
 	/* use Mojo.View.render to render view templates and add them to the scene, if needed */
 	
