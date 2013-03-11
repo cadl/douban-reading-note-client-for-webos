@@ -1,0 +1,9 @@
+{
+	"id": "com.ctrlaltdeletel.readnote",
+	"version": "1.0.0",
+	"vendor": "My Company",
+	"type": "web",
+	"main": "index.html",
+	"title": "readnote",
+	"icon": "icon.png"
+}
