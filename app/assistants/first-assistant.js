@@ -37,6 +37,13 @@ FirstAssistant.prototype.setup = function() {
 FirstAssistant.prototype.activate = function(event) {
 	/* put in event handlers here that should only be in effect when this scene is active. For
 	   example, key handlers that are observing the document */
+	 authObject = new Mojo.Model.Cookie('authObject');
+	 token = authObject.get();
+	 if (token) {
+	   this.controller.stageController.swapScene({
+	       name: 'bookList',
+           });
+         }
 };
 
 FirstAssistant.prototype.deactivate = function(event) {

@@ -108,6 +108,10 @@ OauthAssistant.prototype.codeToken = function(code) {
 		onComplete: function(response) {
 			var response_text = response.responseText;
 			Mojo.Log.info(this.TAG, 'accesstoken: ' + response.status + response_text);
+			if (response.status === 200) {
+			var authObject = new Mojo.Model.Cookie('authObject');
+			   authObject.put(response);
+                        }
 			this.controller.stageController.swapScene({
 				name: this.callbackScene,
 				transition: Mojo.Transition.none
